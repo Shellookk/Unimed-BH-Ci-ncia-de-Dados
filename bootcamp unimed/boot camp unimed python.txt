@@ -1,0 +1,74 @@
+Origem Python
+nasceu em 1989 guido van rossum a ideia era dar a continuidade a linguguagem ABC
+Uma linguaguem pensada para iniciantes
+- uma linguagem facil e intuitiva
+- codigo aberto
+- codigo inteligivel
+- adequada para tarefas diárias e produtiva!
+
+em 1991 é lançada a primeira versão publica 0.9.0
+em 1994 sai a versão 1.0
+em 1995 guida lança a versão 1.2
+em 2001 possui todo o codigo, documentação e especificações da linguaguem
+nasce tbm a PSF 
+em 2008 nasce o python 3, melhrou a performance e problemas de design
+
+tipos em python
+texto = str
+numerico = int, float, complex
+sequencia = list, tuple, range
+mapa = dict
+coleçao = set, fronzenset
+booleano = bool
+binário = bytes, bytearray, memoryview
+
+Exemplos tipo numerico:
+int = 1,10,100...
+float = 1.0, 2.0, 3.5 ....
+
+booleano e strings:
+bool = true or false
+str = "qualquer caractere"
+
+usando o modo imperativo python
+função dir()
+função dir(100)
+função help()
+função help(100)
+
+variaveis e constantes
+
+variaveis = podem mudar o valor
+constantes = não podem mudar o valor
+
+conversão de numeros 
+num = 10
+num = float(num)
+
+num1 = 10.0
+num1 = int(num1)
+
+conversão numerico para strings
+num = 10
+idade = 20
+
+print(str(num))
+print(str(idade))
+
+texto = f"idade {idade} num {num}"
+print(texto)
+
+#obs 
+não pode converter um caractere para numero 
+
+Funções de entrada e saida
+input()
+output()
+nome = input("informe seu nome:")
+
+print(
+
+    end="...\n"
+    sep="#"
+    
+    )
