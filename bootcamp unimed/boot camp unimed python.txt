@@ -72,3 +72,86 @@ print(
     sep="#"
     
     )
+
+Tipos de operadores python
+ Adição(+)
+        (1+1)
+ Subtração(-) 
+        (10-2)
+ Multiplicação(*)
+        (4*3)
+ Divisão(/)
+        (6/2)
+ Divisão inteira(//)
+        (6//3)
+ Módulo(%)
+        (10%3)
+ Exponenciação(**)
+        (1**3)
+Operadores de comparação
+ Igualdade (==)
+    saldo = 450 
+    saque = 200
+    print(saldo == saque)
+ Diferença (!=)
+    print(saldo != saque)
+ Maior que / maior ou igual (> / >=)
+    print(saldo > saque)
+    print(saldo >= saque)
+ Menor que /menor ou igual
+    print(saldo < saque)
+    print(saldo <= saque)
+Operadores de atribuição
+ Atribuição simples (=)
+    saldo = 200
+ Atribuição com adição (+=)
+    saldo = 200
+    saldo +=200
+ Atribuição com Exponenciação (**=)
+    saldo = 80
+    saldo **=2
+ Obs.: 
+ Funciona com todos os operadores aritméticos
+Operadores lógicos
+ São operadores utilizados em conjunto com os operadores de comparação
+    op_comparacao + op_logico....
+ AND
+    Precisa que todos sejam verdadeiros para ser == true
+ OR
+    Precisa que exista apenas uma condição para ser verdadeira
+ NOT
+    É o inversão da verdade
+Operadores de identidade
+ is 
+    is é uma confirmação  ou seja "caso for" "é"
+ is not  
+    is not é uma negação ou seja "caso não for" "não é"
+Operadores de associação
+ IN 
+    Verifica se está na lista
+ NOT IN
+    Verifica se não está na lista
+ Obs.: eles são case sensitive o que significa que qualquer coisa interfere na resposta.
+Identação e blocos de comando
+ Você precisa escrever de acordo com a identação certa
+Estruturas condicionais
+if 
+ Representa o "se"
+    if saldo == saldo
+        print(saldo)
+if/else
+ representa o "se" e o "senão"
+if/elif/else
+ representa o "se", o "senão" e o "elif" é a junção  do if e else. serve quando precisa testar mais de uma condição
+if ternário
+ tudo em uma linha só 
+    status = "sucesso" if saldo >= saque else "Falha"
+Estruturas de repetição
+ For 
+ Serve quando nos sabemos previamente o numero de vezes que queremos repetir
+ Range 
+    Range é uma função do python, ela é usada para produzir uma sequencia de numeros inteiros a parte de um inicio para um fim
+    se usarmos range(i,j) será produzido: i, i+1, i + 2....
+ while 
+ While é um comando que não tem uma quantidade de repetição definida, enquanto existir a condição ele irá se repetir.
+ break para a repetição
