@@ -155,3 +155,93 @@ Estruturas de repetição
  while 
  While é um comando que não tem uma quantidade de repetição definida, enquanto existir a condição ele irá se repetir.
  break para a repetição
+String e fateamento
+   upper()  - deixa tudo em maiusculo
+   lower()  - deixa tudo em minusculo
+   title()  - deixa a primeira letra maiuscula
+   strip()  - remove o espaço
+   lstrip() - remove o espaço da esquerda
+   rstrip() - remove o espaço da direita
+   center() - força a quantidade de caractere que você quer que tenha
+   join()   -junção 
+   replace() - substitui uma palavra por outra
+Interpolação de variaveis 
+   %s para string
+   %d para decimal
+   %f para float
+   {}.format
+   f
+Fatiamento de string
+
+
+Analise de dados com Python e Pandas 
+
+O que é Data Science?
+- É uma ciência que estuda as informações, seu processo de captura, transformação, geração, e posteriormente, análise de dados.
+Estrutura de dados
+
+listas = []
+-remover o objeto
+remove()
+-substituir o elemento
+lista[posição] = o que vc  quer alterar
+-saber quantos elementos tem na lista
+len(nome_da_lista)
+- saber se o elemento existe na lista
+"nome do elemento" in nome_da_lista
+- saber o maior elemento da lista
+max(nome_da_lista)
+-saber o menor elemento da lista
+min(nome_da_lista)
+- adicionar um elemento a nossa lista
+append(nome_do_elemento)
+- adicionar mais de um elemento a lista
+nome_da_lista.extend([elementos, elementos])
+- para saber quantas vezes aparece um elemento na lista
+nome_da_lista.count("nome_do_elemento")
+- para ordenar a lista basta usar o 
+nome_da_lista.sort()
+
+Criando Tuplas
+Tuplas = ()
+As tuplas não permitem alterações!
+
+Dicionários 
+dicionarios = {}
+dc = {chave:valor}
+-retorna a chave
+dc.keys()
+- retorna o valor
+dc.values()
+-verifica se já existe uma chave
+dc.setdefault()
+
+
+Biblioteca Pandas
+import pandas as pd == serve para importar o pandas e da um nome "pd"
+
+df = pd.read_csv("caminho do arquivo", parametros que você quer ou precisa passar(error_bad_lines=False,sep=";")) == está dizendo para ler o arquivo
+
+df.head() ler os dados 
+
+df.rename (columns={adicionar dicionario })
+
+df.shape retornar o total de linhas e colunas do data frame(df)
+
+df.columns retorna o total de colunas
+
+df.dtypes retorna o tipo de dados de cada coluna
+
+df.tail() retorna as ultimas linhas 
+
+df.describe() retorna informações e estatisticas
+
+df[titulo da coluna].unique() retornar apenas os valores da coluna
+
+df.loc[df["nome da coluna"] == "variavel"]
+ 
+df.groupby("nome da coluna")[variavel].nunique() saber dados estatisticos de uma linha ou coluna
+
+df.groupby(ano)["expectativa de vida].mean()
+
+df.sum() soma da coluna
