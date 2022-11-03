@@ -1,6 +1,7 @@
 #importa a biblioteca
+from turtle import title
 import pandas as pd
-
+import matplotlib .pyplot as plt
 #leitura dos arquivos
 df1 = pd.read_excel
 df2 = pd.read_excel
@@ -103,3 +104,57 @@ df["diferenca_dias"] = df["Data"] - df["Data"].min()
 #filtrando as vendas de 2019do mês de março
 vendas_maco_19 = df.loc[(df["Data"].dt.year == 2019) & (df["Data"].dt.moth ==3)]
 vendas_maco_19
+
+#Visualização de Dados
+
+df['LojaID'].value_counts(ascending=False) #asceding retorna os dados do maior para o menor
+
+#Gráfico de barras horizontais
+df['LojaID'].value_counts().plot.barh()
+
+#Gráfico de barras horizontais
+df['LojaID'].value_counts(asceding=True).plot.barh() #retorna do menor para o maior
+
+#Gráfico de pizza
+df.groupby(df['Data'].dt.year)['Receita'].sum().plot.pie()
+
+#total de vendas por cidade
+df['Cidade'].value_counts()
+
+#Adicionando um titulo e alterando o nome dos eixos
+df['Cidade'].value_counts().plot.bar(title="Total vendas por cidade")
+plt.xlabel("Cidade")
+plt.ylabel9("Total Vendas")
+
+#Alterando a cor
+df['Cidade'].value_counts().plot.bar(title="Total vendas por cidade", color ="green")
+plt.xlabel("Cidade")
+plt.ylabel("Total Vendas")
+
+#Alterando o Estilo
+plt.style.use("ggplot")
+df.groupby(df['mes_venda'])['Qtde'].sum().plot() # .plot() cria um grafico de linhas
+plt.xlabel("Mês")
+plt.ylabel("Total Produtos Vendidos")
+plt.legend()
+
+df.groupby(df['mes_venda'])['Qtde'].sum()
+
+#Selecionando apenas as vendas de 2019
+df_2019.groupby(df_2019["mes_venda"])["Qtde"].sum().plot(marker = "v")
+plt.xlabel("Mês")
+plt.ylabel("Total produtos vendidos")
+plt.legend()
+
+#Histograma
+plt.hist(df["Qtde"], color="magenta")
+
+plt.scatter(x=df_2019["dia_venda"], y= df_2019["Receita"])
+
+#salvando em png
+df_2019.groupby(df_2019["mes_venda"])["Qtde"].sum().plot(marker = "v")
+plt.title("Quantidade de produtos vendidos x mês")
+plt.xlabel("Mês")
+plt.ylabel("Total produtos Vendidos")
+plt.legend()
+plt.savefig("grafico QTDE x MES.png")
