@@ -71,3 +71,36 @@ pessoa["Telefone"] = "3333-1234"
 # .values()
 # in (Pecorre as listas, dicionarios e etc)
 # del 
+#trabalhando com funções
+#Função é um bloco de código identificado por um nome e pode receber uma lista de parâmetros, esses parâemtros podem ou não ter valores padrões
+
+def exibir_mensagem():
+    print("Olá mundo!")
+
+def exibir_mensagem_2(nome):
+    print("Seja bem vindo{}!".format(nome))
+
+def exibir_mensagem_3(nome="Isaque"):
+    print("SejaBem vindo{}".format(nome))
+
+def calcular_total(numeros):
+    return sum(numeros)
+calcular_total(numeros=[10,20])
+
+def retorna_antecessor_e_sucessor(numero):
+    antecessor = numero -1
+    sucessor = numero +1
+    return antecessor, sucessor
+retorna_antecessor_e_sucessor(numero=10,)
+
+def salvar_carro(marca, modelo, ano, placa):
+    print(f"Carro inserido com sucesso! {marca}/{modelo}{ano}/{placa}")
+
+salvar_carro("Fiat", "Palio", 1999, "ABC-1234")
+salvar_carro(marca="", modelo= "" , ano=2002 , placa="")
+# ** dois pontos significa que você está passando um dicionário
+# args e kwargs
+# ags vem em tupla e kwargs retorna em dicionário
+#  argumentos por posição / argumentos declarados (carro="uno")
+#(*, obriga a nomear o argumento )
+
